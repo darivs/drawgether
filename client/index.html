@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Drawgether</title>
+    <link rel="stylesheet" type="text/css" href="design.css">
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <style> body {padding: 0; margin: 0;} </style>
+    <script src="../p5.min.js"></script>
+    <script src="sketch.js"></script>
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body id="body">
+    <div id="pop-up">
+        <div class="container">
+          <h1 id ="pop-h1">Drawgether</h1>
+          <p id ="pop-p">Bitte geben Sie einen Namen ein um zu spielen:</p>
+          <input id="input-name" type="name" placeholder="Name" required>
+          <button id="pop-button" onclick="fadeInGame()">Go!</button>
+        </div>
+    </div>
+    <div id= 'Header'>
+      <center>
+          <h1 id ="h1-header">» DRAWGETHER «</h1>
+      </center>
+    </div>
+    <div id= 'spielfeld'></div>
+    <div id= 'chat'>
+    </div>
+    <textarea id= 'textarea' type='text' onkeypress="return sendMsg(event)"></textarea>
+  </body>
+</html>
